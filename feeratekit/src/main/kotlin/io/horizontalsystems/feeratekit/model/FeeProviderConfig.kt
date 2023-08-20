@@ -1,11 +1,12 @@
 package io.horizontalsystems.feeratekit.model
 
-data class FeeProviderConfig(
+class FeeProviderConfig(
     val ethEvmUrl: String,
     val ethEvmAuth: String? = null,
     val bscEvmUrl: String,
-    val mempoolSpaceUrl: String,
-){
+    val btcCoreRpcUrl: String? = null,
+    val btcCoreRpcUser: String? = null,
+    val btcCoreRpcPassword: String? = null){
 
     companion object{
         fun defaultBscEvmUrl(): String = "https://bsc-dataseed.binance.org"

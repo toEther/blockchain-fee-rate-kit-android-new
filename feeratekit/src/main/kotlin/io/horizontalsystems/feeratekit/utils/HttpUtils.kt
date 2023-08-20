@@ -31,16 +31,5 @@ class HttpUtils {
 
             return Json.parse(httpClient.newCall(request).execute().body!!.charStream())
         }
-
-        fun get(resource: String): JsonValue {
-            val requestBuilder = Request.Builder()
-
-            val request = requestBuilder
-                .url(resource)
-                .get()
-                .build()
-
-            return Json.parse(httpClient.newCall(request).execute().body!!.charStream())
-        }
     }
 }
